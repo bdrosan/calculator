@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>To Do App</title>
+		<style type="text/css">
+		@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+			body{
+				margin: 0;
+				padding: 0;
+				font-family: 'Open Sans', sans-serif;
+			}
+			.container{
+				margin: 0 auto;
+				padding: 20px;
+			}
+            .calcBody{
+                padding: 20px;
+                border: 1px solid #CCC;
+                width: 254px;
+            }
+			button{
+				height: 40px;
+				width: 60px;
+				background: #4CAF50;
+				border: 2px solid green;
+				cursor: pointer;
+				border-radius: 4px;
+				color: white;
+				font-size: 20px;
+            }
+            button:hover{
+                border-color: rgb(0, 80, 0)
+            }
+            button:active{
+                background: rgb(28, 87, 30);
+            }
+            .calcDisplay{
+                border:1px solid #EEE;
+                width:240px;
+                margin-bottom:10px;
+                text-align: right;
+                padding: 2px 5px;
+                font-size: 24px;
+                overflow: auto;
+            }
+			.row{
+                margin-bottom: 5px;
+            }
+		</style>
+	</head>
+	<body>
+		<div class="container">
+            <h3>Javascript Calculator</h3>
+            <div class="calcBody">
+                <div class="calcDisplay" id="calcDisplay">
+                    0
+                </div>
+                <div class="buttons">
+                    <div class="row">
+                        <button>√</button> <button>%</button> <button id="del">del</button> <button id="ac">AC</button>
+                    </div>
+                    <div class="row">
+                        <button id="seven">7</button> <button id="eight">8</button> <button id="nine">9</button> <button id="devide">÷</button>
+                    </div>
+                    <div class="row">
+                        <button id="four">4</button> <button id="five">5</button> <button id="six">6</button> <button id="multiply">×</button>
+                    </div>
+                    <div class="row">
+                        <button id="one">1</button> <button id="two">2</button> <button id="three">3</button> <button id="minus">-</button>
+                    </div>
+                    <div class="row">
+                        <button>0</button> <button>.</button> <button>=</button> <button>+</button>
+                    </div>
+                </div>
+            </div>
+		</div>
+	
+	<script>
+        let calcDisplay = document.getElementById('calcDisplay');
+        let ac = document.getElementById('ac');
+        let del = document.getElementById('del');
+        let one = document.getElementById('one');
+        let two = document.getElementById('two');
+        let three = document.getElementById('three');
+        let four = document.getElementById('four');
+        let five = document.getElementById('five');
+        let six = document.getElementById('six');
+        let seven = document.getElementById('seven');
+        let eight = document.getElementById('eight');
+        let nine = document.getElementById('nine');
+        
+        ac.onclick = function(){
+            calcDisplay.innerText = 0
+        }
+        del.onclick = function(){
+            if(calcDisplay.innerText.length == 1)
+            {
+                calcDisplay.innerText = 0;
+            }
+            else{
+                calcDisplay.innerText = calcDisplay.innerText = document.getElementById('calcDisplay').innerText.slice(0, calcDisplay.innerText.length-1);
+            }
+        }
+		one.onclick = function(){
+            if(calcDisplay.innerText == 0){
+                calcDisplay.innerText = 1;
+            }
+            else{
+                calcDisplay.innerText = calcDisplay.innerText + 1;
+            }
+        }
+        two.onclick = function(){
+            if(calcDisplay.innerText == 0){
+                calcDisplay.innerText = 2;
+            }
+            else{
+                calcDisplay.innerText = calcDisplay.innerText + 2;
+            }
+        }
+        three.onclick = function(){
+            if(calcDisplay.innerText == 0){
+                calcDisplay.innerText = 3;
+            }
+            else{
+                calcDisplay.innerText = calcDisplay.innerText + 3;
+            }
+        }
+        four.onclick = function(){
+            if(calcDisplay.innerText == 0){
+                calcDisplay.innerText = 4;
+            }
+            else{
+                calcDisplay.innerText = calcDisplay.innerText + 4;
+            }
+        }
+        five.onclick = function(){
+            if(calcDisplay.innerText == 0){
+                calcDisplay.innerText = 5;
+            }
+            else{
+                calcDisplay.innerText = calcDisplay.innerText + 5;
+            }
+        }
+        six.onclick = function(){
+            if(calcDisplay.innerText == 0){
+                calcDisplay.innerText = 6;
+            }
+            else{
+                calcDisplay.innerText = calcDisplay.innerText + 6;
+            }
+        }
+        seven.onclick = function(){
+            if(calcDisplay.innerText == 0){
+                calcDisplay.innerText = 7;
+            }
+            else{
+                calcDisplay.innerText = calcDisplay.innerText + 7;
+            }
+        }
+        eight.onclick = function(){
+            if(calcDisplay.innerText == 0){
+                calcDisplay.innerText = 8;
+            }
+            else{
+                calcDisplay.innerText = calcDisplay.innerText + 8;
+            }
+        }
+        nine.onclick = function(){
+            if(calcDisplay.innerText == 0){
+                calcDisplay.innerText = 9;
+            }
+            else{
+                calcDisplay.innerText = calcDisplay.innerText + 9;
+            }
+        }
+        
+	</script>
+	</body>
+</html>
